@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Iron Wear</title>
-    <link rel="stylesheet" href="index.css"> 
+    <link rel="stylesheet" href="cart.css"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script type="text/javascript" src="index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -31,7 +31,58 @@
     </header>
 
 
-
+    <body>
+            
+            <div id="product">
+              <ul class="product-list">
+              <li class="product-group">
+              <div>
+                <span class="productname">IronBobble-head</span> 
+              </div>
+              <div>
+                  <span>$25.00</span> 
+              </div>
+              <div>
+                <label class="quantity">QTY</label>
+                <input name="quantity" type="text">
+              </div>
+              <div>
+                <span>
+                  $0.00
+                </span>
+              </div>
+              <div>
+                <button id="del" class="btn-delete">Delete</button>
+              </div>
+              </li>
+              <li class="product-group">
+              <div>
+                  <span>IronShirt</span> 
+                </div>
+                <div>
+                    <span>$15.00</span> 
+                </div>
+                <div>
+                  <label class="quantity">QTY</label>
+                  <input name="quantity" type="text">
+                </div>
+                <div>
+                  <span>
+                    $0.00
+                  </span>
+                </div>
+                <div>
+                  <button id="del" class="btn-delete">Delete</button>
+                </div>
+              </li>
+            </ul>
+            </div>
+            <div id="calc-prices-button" class="calculatePrices">
+              <button>Calculate Prices</button>
+            </div>
+            <div class="total">
+              <h1>Total Price: $<span>0</span></h1>
+            </div>
 
 
 
