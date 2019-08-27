@@ -40,7 +40,7 @@
                 <span class="productname">IronBobble-head</span> 
               </div>
               <div>
-                  <span>$25.00</span> 
+                  <p>$<span>25.00</span> </p>
               </div>
               <div>
                 <label class="quantity">QTY</label>
@@ -55,43 +55,16 @@
                 <button id="del" class="btn-delete">Delete</button>
               </div>
               </li>
-              <li class="product-group">
-              <div>
-                  <span>IronShirt</span> 
-                </div>
-                <div>
-                    <span>$15.00</span> 
-                </div>
-                <div>
-                  <label class="quantity">QTY</label>
-                  <input name="quantity" type="text">
-                </div>
-                <div>
-                  <span>
-                    $0.00
-                  </span>
-                </div>
-                <div>
-                  <button id="del" class="btn-delete">Delete</button>
-                </div>
-              </li>
-            </ul>
-            </div>
+              
+              </ul>
+              
             <div id="calc-prices-button" class="calculatePrices">
               <button>Calculate Prices</button>
             </div>
             <div class="total">
               <h1>Total Price: $<span>0</span></h1>
             </div>
-
-
-
-
-
-
-
-
-
+</body>
 <footer>
         <h2>Iron Wear</h2>
         <ul class="footer">
@@ -100,5 +73,26 @@
             <li class="bottom-nav"><a href="#">About</a></li>
         </ul>
     </footer>
-</body>
+
+<script>
+ 
+        var urlParams = new URLSearchParams(window.location.search);
+        console.log(urlParams.get('name'));
+        console.log(urlParams.get('price')); // "edit"
+        document.querySelector("#product > ul > li:nth-child(1) > div:nth-child(1) > span").innerHTML = urlParams.get('name')
+        document.querySelector("#product > ul > li:nth-child(1) > div:nth-child(2) > p > span").innerHTML = urlParams.get('price')
+
+        document.querySelector("#calc-prices-button > button").onclick = function(){
+            var price= document.querySelector("#product > ul > li > div:nth-child(2) > p > span").innerText
+            var qty= document.querySelector("#product > ul > li > div:nth-child(3) > input[type=text]")
+            
+            document.querySelector("#product > div.total > h1 > span").innerText = price * qty.value
+        }
+        document.querySelector("#del").onclick = function(){
+            console.log('wor')
+            document.querySelector("#product > ul > li > div:nth-child(3) > input[type=text]").value =""
+            document.querySelector("#product > div.total > h1 > span").innerHTML = "0"
+        }
+
+</script>
 </html>

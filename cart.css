@@ -26,7 +26,7 @@ header {
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
-    padding-left: 50px;
+    padding-left: 30px;
 }
 ul a{
     display: flex;
@@ -38,6 +38,8 @@ ul {
     list-style-type: none;  
     
     padding-right: 40px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .nav-bar{
     display: flex;
@@ -50,6 +52,7 @@ ul {
     list-style-type: none !important;
     text-decoration-style: none;
     color: white;
+    
 }
 footer h2{
     display: flex;
@@ -60,6 +63,7 @@ footer h2{
 footer{
     background: #420000;
     color: #D4D7DD !important;
+    width: 100%;
 }
 footer a{
     color: #D4D7DD !important;
@@ -151,13 +155,15 @@ input {
   }
   ul{
     list-style-type: none;
-    
+    align-items: center;
+    justify-content: space-evenly;
     
   }
   .product-group{
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    width: 100%;
     
   }
   #product > ul > li:nth-child(1) > div:nth-child(1) > span{
@@ -168,7 +174,7 @@ input {
   }
   
   .product-group div {
-    width: 18%
+    width: 100%;
   }
   .total{
   display: flex;
